@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const API = "http://" + window.location.hostname + ":8000/api/auth";
+const API = import.meta.env.VITE_API_URL + "/api/auth";
 
 async function apiLogin(username, password) {
   const form = new URLSearchParams();
