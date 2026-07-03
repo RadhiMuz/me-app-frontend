@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const API = "http://" + window.location.hostname + ":8000/api/auth";
+const API = import.meta.env.VITE_API_URL + "/api/auth";
 
 async function apiGetUsers(token) {
   const res = await fetch(`${API}/users`, { headers: { Authorization: `Bearer ${token}` } });

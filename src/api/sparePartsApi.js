@@ -1,7 +1,6 @@
-const HOST = window.location.hostname;
-const BASE = `http://${HOST}:8000/api/spare-parts`;
-const STOCK_OUT_BASE = `http://${HOST}:8000/api/stock-out`;
-const EXPORT_BASE = `http://${HOST}:8000/api/export`;
+const BASE = import.meta.env.VITE_API_URL + "/api/spare-parts";
+const STOCK_OUT_BASE = import.meta.env.VITE_API_URL + "/api/stock-out";
+const EXPORT_BASE = import.meta.env.VITE_API_URL + "/api/export";
 
 export async function fetchParts({ category, status, search } = {}) {
   const params = new URLSearchParams();

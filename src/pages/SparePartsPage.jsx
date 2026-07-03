@@ -6,7 +6,7 @@ import {
   importInventoryFromSheets, importStockOutFromSheets, syncAllToSheets,
 } from "../api/sparePartsApi.js";
 
-const BASE_URL = `http://${window.location.hostname}:8000`;
+const BASE_URL = import.meta.env.VITE_API_URL;
 const inputStyle = { width: "100%", padding: "9px 11px", border: "1.5px solid #e5e7eb", borderRadius: 9, fontSize: 13, color: "#111", background: "#fff", fontFamily: "'DM Sans', sans-serif", boxSizing: "border-box" };
 const labelStyle = { display: "block", fontSize: 11, fontWeight: 700, color: "#6b7280", marginBottom: 4, textTransform: "uppercase", letterSpacing: "0.04em" };
 

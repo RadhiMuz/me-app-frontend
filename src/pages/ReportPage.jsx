@@ -3,7 +3,7 @@ import { LOCATION_HIERARCHY } from "./reportLocationData.js";
 import { DOWNTIME_CATEGORIES } from "./downtimeData.js";
 
 const HOST = window.location.hostname;
-const API = `http://${HOST}:8000/api/reports`;
+const API = import.meta.env.VITE_API_URL + "/api/reports";
 
 const inputStyle = {
   width: "100%", padding: "10px 13px", border: "1.5px solid #e5e7eb",
@@ -304,7 +304,7 @@ function ReportCard({ report, token, username, isAdmin, isSuperAdmin, onUpdated,
 
       {report.images.length > 0 && (
         <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 10 }}>
-          {report.images.map((img, i) => <img key={i} src={`http://${HOST}:8000${img}`} alt="" onClick={() => setLightbox(`http://${HOST}:8000${img}`)} style={{ width: 68, height: 68, objectFit: "cover", borderRadius: 7, border: "1px solid #e5e7eb", cursor: "pointer" }} />)}
+          {report.images.map((img, i) => <img key={i} src={`${import.meta.env.VITE_API_URL}${img}`} alt="" onClick={() => setLightbox(`${import.meta.env.VITE_API_URL}${img}`)} style={{ width: 68, height: 68, objectFit: "cover", borderRadius: 7, border: "1px solid #e5e7eb", cursor: "pointer" }} />)}
         </div>
       )}
 
@@ -331,7 +331,7 @@ function ReportCard({ report, token, username, isAdmin, isSuperAdmin, onUpdated,
             <div style={{ marginTop: 10 }}>
               <div style={{ fontWeight: 700, color: "#6b7280", fontSize: 11, textTransform: "uppercase", marginBottom: 6 }}>Follow-up Photos</div>
               <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-                {report.followup_images.map((img, i) => <img key={i} src={`http://${HOST}:8000${img}`} alt="" onClick={() => setLightbox(`http://${HOST}:8000${img}`)} style={{ width: 68, height: 68, objectFit: "cover", borderRadius: 7, border: "1px solid #bbf7d0", cursor: "pointer" }} />)}
+                {report.followup_images.map((img, i) => <img key={i} src={`${import.meta.env.VITE_API_URL}${img}`} alt="" onClick={() => setLightbox(`${import.meta.env.VITE_API_URL}${img}`)} style={{ width: 68, height: 68, objectFit: "cover", borderRadius: 7, border: "1px solid #bbf7d0", cursor: "pointer" }} />)}
               </div>
             </div>
           )}

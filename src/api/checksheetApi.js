@@ -1,4 +1,4 @@
-const BASE = `http://${window.location.hostname}:8000`;
+const BASE = import.meta.env.VITE_API_URL;
 const APP_ID = 1;
 
 export async function fetchLines() {
