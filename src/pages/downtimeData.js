@@ -1,0 +1,38 @@
+export const DOWNTIME_CATEGORIES = {
+  "Electrical": [
+    "PLC Unit Malfunction", "PLC I/O Module Failure", "HMI Failure", "Sensor Malfunction",
+    "Encoder Failure", "Servo Drive Failure", "Servo Motor Failure", "Inverter (VFD) Failure",
+    "Motor Electrical Failure", "Power Supply Failure", "Contactor Failure", "Relay Failure",
+    "Circuit Breaker Trip", "Fuse Blown", "Cable Damage", "Connector Failure",
+    "Communication Failure", "Emergency Stop Circuit", "Safety Circuit Failure",
+    "Transformer Failure", "Welding Robot Controller Fault", "Robot Servo Alarm",
+    "Robot Axis Failure", "Robot Encoder Failure", "Robot Communication Failure",
+    "Robot Teaching Pendant Failure", "Robot Home Position Error", "Robot Calibration Error",
+    "Robot Safety Interlock Fault", "Robot Welding Power Source Fault",
+    "Robot Torch Cleaner Failure", "Robot Wire Feeder Failure",
+    "Robot Welding Torch Electrical Fault", "Robot Arc Detection Failure", "Others",
+  ],
+  "Pneumatic": [
+    "Air Cylinder Failure", "Solenoid Valve Failure", "Air Leak", "FRL Unit Failure",
+    "Pressure Regulator Failure", "Pressure Switch Failure", "Pneumatic Hose Damage",
+    "Pneumatic Fitting Failure", "Vacuum Pad Failure", "Vacuum Leak",
+    "Air Compressor Supply Issue", "Directional Control Valve Failure",
+    "Flow Control Valve Failure", "Moisture/Water in Air Line", "Others",
+  ],
+  "Hydraulic": [
+    "Hydraulic Pump Failure", "Hydraulic Cylinder Failure", "Hydraulic Motor Failure",
+    "Hydraulic Hose Leak", "Hydraulic Fitting Leak", "Hydraulic Valve Failure",
+    "Pressure Relief Valve Failure", "Hydraulic Filter Blocked", "Hydraulic Oil Leak",
+    "Low Hydraulic Oil Level", "Hydraulic Oil Contamination", "Pressure Loss",
+    "Hydraulic Seal Failure", "Cooler Failure", "Overheating", "Others",
+  ],
+  "Mechanical": [
+    "Bearing Failure", "Gearbox Failure", "Chain Failure", "Belt Failure",
+    "Pulley Failure", "Coupling Failure", "Shaft Failure", "Roller Failure",
+    "Conveyor Failure", "Sprocket Failure", "Linear Guide Failure", "Ball Screw Failure",
+    "Mechanical Jam", "Jig & Fixture Damage", "Jig Clamp Failure", "Jig Locator Failure",
+    "Jig Locking Mechanism Failure", "Jig Alignment Issue", "Jig Wear & Tear",
+    "Welding Fixture Damage", "Fastener Loose", "Structural Damage", "Lubrication Issue",
+    "Mechanical Misalignment", "Mechanical Wear", "Others",
+  ],
+};
